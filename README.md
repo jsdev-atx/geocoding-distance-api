@@ -73,17 +73,7 @@ This starts PostgreSQL, the Django app behind Gunicorn, and Nginx as a reverse p
 pytest
 ```
 
-122 tests covering:
-
-- Unit tests for models, services, serializers, client, and views
-- Integration tests hitting all three endpoints end-to-end (with mocked Google responses)
-- Property-based tests using Hypothesis for:
-  - Query normalization invariants (lowercase, no extra whitespace, idempotent)
-  - Haversine properties (non-negative, symmetric, triangle inequality, identity, upper bound)
-  - Unit conversion consistency (miles = km × 0.621371)
-  - Coordinate validation rejection (out-of-range inputs → 400)
-  - Response envelope structure consistency
-  - Lookup deduplication (equivalent queries produce exactly one DB record)
+45 tests covering unit tests, integration tests (all three endpoints with mocked Google responses), and property-based tests using Hypothesis for normalization invariants and Haversine mathematical properties.
 
 ## Tech stack
 
